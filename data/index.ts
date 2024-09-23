@@ -10,7 +10,7 @@ export const heroGridItems1 = [
     id: 1,
     title: "Hey, I'm Jonny! A Front-End Web Developer",
     className: "md:col-span-1 md:row-span-1",
-    imgClassName: "!w-full !h-auto !block ",
+    imgClassName: "w-full h-auto",
     titleClassName: "justify-end",
     img: "/assets/hero-logo-dark.png",
     spareImg: "",
@@ -19,8 +19,8 @@ export const heroGridItems1 = [
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
-    descriptionTop: "Role - Front-End Web Developer",
+    title: "Role - Front-End Web Developer",
+    descriptionTop: "",
     descriptionBottom:
       "Discover the beauty of thoughtful and functional design.",
     className: "md:col-span-1 md:row-span-1",
@@ -28,11 +28,11 @@ export const heroGridItems1 = [
     titleClassName: "justify-start",
     img: "",
     spareImg: "",
-    pillTitle: "Work",
+    pillTitle: "Work - Current",
   },
   {
     id: 3,
-    title: "My tech stack",
+    title: "Role - Front-End Web Developer",
     description: "I constantly try to improve",
     className: "md:col-span-1 md:row-span-1",
     imgClassName: "hidden",
@@ -43,7 +43,7 @@ export const heroGridItems1 = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title: "Project - Foodie Friends",
     description: "",
     className: "md:col-span-2 md:row-span-1",
     imgClassName: "hidden",
@@ -55,49 +55,14 @@ export const heroGridItems1 = [
 
   {
     id: 5,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
+    title: "About Me",
+    descriptionTop:
+      "Love building things which is how I got into this career of Web Development. In my free time I build keyboards, plastic model kits and PCs",
     className: "md:col-span-1 md:row-span-1",
     imgClassName: "hidden",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "",
     spareImg: "",
     pillTitle: "About",
-  },
-];
-
-export const heroGridItems2 = [
-  {
-    id: 1,
-    title: "Reach Out!",
-    className: "md:col-span-1 md:row-span-1",
-    imgClassName: "hidden",
-    titleClassName: "justify-end text-center",
-    img: "",
-    spareImg: "",
-    pillTitle: "Contact",
-    pillClassName: "",
-  },
-  {
-    id: 2,
-    title: "Recently Played",
-    descriptionTop: "",
-    descriptionBottom: "",
-    className: "md:col-span-1 md:row-span-1",
-    imgClassName: "hidden",
-    titleClassName: "justify-start text-center",
-    img: "",
-    spareImg: "",
-    pillTitle: "Music",
-  },
-  {
-    id: 3,
-    title: "Achievements",
-    className: "md:col-span-1 md:row-span-1",
-    imgClassName: "hidden",
-    titleClassName: "justify-center text-center",
-    img: "",
-    spareImg: "",
-    pillTitle: "Gaming",
   },
 ];
