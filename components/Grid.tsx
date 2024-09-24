@@ -1,12 +1,14 @@
 import React from "react";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
-import { heroGridItems1, heroGridItems2 } from "@/data";
+import { heroGridItems1 } from "@/data";
+import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
 
 const Grid = () => {
   return (
     <section
       id="about"
-      className="h-fit flex justify-center align-middle flex-col gap-4 md:h-screen"
+      className="h-fit flex justify-center align-middle flex-col gap-4"
     >
       <BentoGrid>
         {heroGridItems1.map(
@@ -18,6 +20,7 @@ const Grid = () => {
             className,
             img,
             imgClassName,
+            imgStyle,
             titleClassName,
             pillTitle,
             pillClassName,
@@ -34,6 +37,7 @@ const Grid = () => {
               pillClassName={pillClassName}
               img={img}
               imgClassName={imgClassName}
+              imgStyle={imgStyle}
             />
           ),
         )}
@@ -46,23 +50,27 @@ const Grid = () => {
           title="Reach Out!"
           titleClassName="justify-center text-center"
         >
-          <div className="text-white">test</div>
+          <div className="flex flex-row gap-10 justify-center pb-5 pt-3">
+            <SiLinkedin className="text-white text-4xl hover:scale-125 transition-all duration-300" />
+            <SiGithub className="text-white text-4xl hover:scale-125 transition-all duration-300" />
+            <SiGmail className="text-white text-4xl hover:scale-125 transition-all duration-300" />
+          </div>
         </BentoGridItem>
         <BentoGridItem
           id={6}
           pillTitle="Music"
           title="Recently Played"
           titleClassName="justify-center text-center"
-        >
-          <div className="text-white">test</div>
-        </BentoGridItem>
+        ></BentoGridItem>
         <BentoGridItem
           id={6}
-          pillTitle="Gaming"
-          title="Achievements"
+          pillTitle="Tech"
+          title="Skills"
           titleClassName="justify-center text-center"
         >
-          <div className="text-white">test</div>
+          <div className="flex flex-row gap-10 justify-center pb-5 pt-3">
+            <RiNextjsFill className="text-white text-4xl" />
+          </div>
         </BentoGridItem>
       </BentoGrid>
     </section>

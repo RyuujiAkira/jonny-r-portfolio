@@ -1,8 +1,7 @@
 export const navItems = [
-  { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
-  { name: "Contact", link: "#contact" },
+  { name: "Experience", link: "#experience" },
+  { name: "About", link: "#about" },
 ];
 
 export const heroGridItems1 = [
@@ -10,9 +9,10 @@ export const heroGridItems1 = [
     id: 1,
     title: "Hey, I'm Jonny! A Front-End Web Developer",
     className: "md:col-span-1 md:row-span-1",
-    imgClassName: "w-full h-auto",
-    titleClassName: "justify-end",
+    imgClassName: "",
+    titleClassName: "",
     img: "/assets/hero-logo-dark.png",
+    imgStyle: { objectFit: "contain" },
     spareImg: "",
     pillTitle: "",
     pillClassName: "hidden",
@@ -59,9 +59,10 @@ export const heroGridItems1 = [
     descriptionTop:
       "Love building things which is how I got into this career of Web Development. In my free time I build keyboards, plastic model kits and PCs",
     className: "md:col-span-1 md:row-span-1",
-    imgClassName: "hidden",
+    imgClassName: "",
     titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "",
+    img: "/assets/about.jpg",
+    imgStyle: { objectFit: "cover" },
     spareImg: "",
     pillTitle: "About",
   },

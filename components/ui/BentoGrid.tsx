@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { div } from "framer-motion/client";
 import Image from "next/image";
 
 export const BentoGrid = ({
@@ -31,6 +32,7 @@ export const BentoGridItem = ({
   id,
   img,
   imgClassName,
+  imgStyle,
   pillTitle,
   pillClassName,
   children,
@@ -45,6 +47,7 @@ export const BentoGridItem = ({
   id: number;
   img: string;
   imgClassName: string;
+  imgStyle?: React.CSSProperties;
   pillTitle?: string;
   pillClassName?: string;
   children?: React.ReactNode;
@@ -52,33 +55,38 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:border-white/[0.2] border border-transparent justify-between flex flex-col space-y-4 border-red-500 cursor-pointer",
+        "row-span-1 relative rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:border-white/[0.2] border border-transparent flex flex-col space-y-4 border-red-500 cursor-pointer",
         id === 1
-          ? "md:dark:bg-black-100 bg-none dark:border-none cursor-default justify-center"
-          : "dark:bg-black-100 bg-white dark:border-white/[0.2]",
+          ? "md:dark:bg-black-100 bg-none dark:border-none cursor-default"
+          : "dark:bg-black-100 bg-white dark:border-white/[0.2] justify-between",
         className,
       )}
     >
-      <div
-        className={cn(
-          "absolute max-w-fit w-full h-5 px-5 py-1 bg-black-100 rounded-full -top-2 left-7 text-white text-center leading-[10px]",
-          pillClassName,
-        )}
-      >
-        {pillTitle}
-      </div>
+      {pillTitle ? (
+        <div
+          className={cn(
+            "absolute max-w-fit w-full h-5 px-5 py-1 bg-black-100 rounded-full -top-2 left-7 text-white text-center leading-[10px]",
+            pillClassName,
+          )}
+        >
+          {pillTitle}
+        </div>
+      ) : null}
       {header}
-      <div className="group-hover/bento:translate-x-2 transition duration-200">
+      <div className="group-hover/bento:translate-x-2 transition duration-200 h-full flex flex-col">
         {icon}
         {img ? (
-          <Image
-            className={cn("block", imgClassName)}
-            src={img}
-            width={210}
-            height={100}
-            alt=""
-            style={{ objectFit: "contain" }}
-          />
+          <div className="w-full h-full relative">
+            <Image
+              className={cn(imgClassName)}
+              src={img}
+              // width={210}
+              // height={100}
+              alt="Jonny R Logo"
+              fill={true}
+              style={{ ...imgStyle }}
+            />
+          </div>
         ) : null}
         <div
           className={cn(
@@ -110,8 +118,8 @@ export const BentoGridItem = ({
             {descriptionBottom}
           </div>
         ) : null}
+        {children}
       </div>
-      {children}
     </div>
   );
 };
