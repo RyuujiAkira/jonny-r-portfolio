@@ -2,7 +2,8 @@ import React from "react";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 import { heroGridItems1 } from "@/data";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
-import { RiNextjsFill } from "react-icons/ri";
+import { RiNextjsFill, RiJavascriptFill } from "react-icons/ri";
+import { FaHtml5, FaCss3 } from "react-icons/fa";
 
 const Grid = () => {
   return (
@@ -70,6 +71,9 @@ const Grid = () => {
         >
           <div className="flex flex-row gap-10 justify-center pb-5 pt-3">
             <RiNextjsFill className="text-white text-4xl" />
+            <FaHtml5 className="text-white text-4xl" />
+            <FaCss3 className="text-white text-4xl" />
+            <RiJavascriptFill className="text-white text-4xl" />
           </div>
         </BentoGridItem>
       </BentoGrid>
