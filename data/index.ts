@@ -1,7 +1,8 @@
 export const navItems = [
-  { name: "Projects", link: "#projects" },
-  { name: "Experience", link: "#experience" },
+  { name: "Contact" },
   { name: "About", link: "#about" },
+  { name: "Experience", link: "#experience" },
+  { name: "Projects", link: "#projects" },
 ];
 
 export const heroGridItems1 = [
@@ -20,35 +21,43 @@ export const heroGridItems1 = [
   {
     id: 2,
     title: "Role - Front-End Web Developer",
-    descriptionTop: "",
+    descriptionTop:
+      "Day to day is supporting the business with BAU tasks such as updating assets on relevant pages and scheduling new content to go live on specific dates and times on Salesforce",
     descriptionBottom:
-      "Discover the beauty of thoughtful and functional design.",
+      "Additional responsibilities - A/B Testing - Dynamic Yield",
     className: "md:col-span-1 md:row-span-1",
-    imgClassName: "hidden",
+    imgClassName: "!w-[70%] mx-auto",
     titleClassName: "justify-start",
-    img: "",
+    img: "/assets/ann-summers.png",
+    imgStyle: { objectFit: "contain" },
     spareImg: "",
     pillTitle: "Work - Current",
   },
   {
     id: 3,
     title: "Role - Front-End Web Developer",
-    description: "I constantly try to improve",
+    descriptionTop:
+      "Day to day is supporting the business with BAU tasks such as updating assets on relevant pages and creating new bespoke features for different campaigns on SAP Commerce",
+    descriptionBottom:
+      "Additional responsibilities - A/B Testing - Google Optimize, Google Tag Manager, Taxi for Email",
     className: "md:col-span-1 md:row-span-1",
-    imgClassName: "hidden",
+    imgClassName: "!w-[70%] mx-auto",
     titleClassName: "justify-center",
-    img: "",
+    img: "/assets/the-perfume-shop.png",
+    imgStyle: { objectFit: "contain" },
     spareImg: "",
     pillTitle: "Work",
   },
   {
     id: 4,
     title: "Project - Foodie Friends",
-    description: "",
+    descriptionTop:
+      "Concept project for a web app allows people to connect and enjoy food together, if you have no one to eat with you can schedule a meal with other users on the app with recommendations.",
     className: "md:col-span-2 md:row-span-1",
-    imgClassName: "hidden",
+    imgClassName: "rounded-xl",
     titleClassName: "justify-start",
-    img: "",
+    img: "/assets/foodie-friends.jpg",
+    imgStyle: { objectFit: "cover" },
     spareImg: "",
     pillTitle: "Project",
   },
@@ -59,7 +68,7 @@ export const heroGridItems1 = [
     descriptionTop:
       "Love building things which is how I got into this career of Web Development. In my free time I build keyboards, plastic model kits and PCs",
     className: "md:col-span-1 md:row-span-1",
-    imgClassName: "",
+    imgClassName: "rounded-xl",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/assets/about.jpg",
     imgStyle: { objectFit: "cover" },

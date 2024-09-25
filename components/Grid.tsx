@@ -1,8 +1,18 @@
 import React from "react";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 import { heroGridItems1 } from "@/data";
-import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
-import { RiNextjsFill, RiJavascriptFill } from "react-icons/ri";
+import {
+  SiAdobecreativecloud,
+  SiGithub,
+  SiGmail,
+  SiGoogletagmanager,
+  SiLinkedin,
+} from "react-icons/si";
+import {
+  RiNextjsFill,
+  RiJavascriptFill,
+  RiTailwindCssFill,
+} from "react-icons/ri";
 import { FaHtml5, FaCss3 } from "react-icons/fa";
 
 const Grid = () => {
@@ -69,11 +79,14 @@ const Grid = () => {
           title="Skills"
           titleClassName="justify-center text-center"
         >
-          <div className="flex flex-row gap-10 justify-center pb-5 pt-3">
+          <div className="flex flex-row gap-5 justify-center pb-5 pt-3">
             <RiNextjsFill className="text-white text-4xl" />
             <FaHtml5 className="text-white text-4xl" />
             <FaCss3 className="text-white text-4xl" />
             <RiJavascriptFill className="text-white text-4xl" />
+            <RiTailwindCssFill className="text-white text-4xl" />
+            <SiAdobecreativecloud className="text-white text-4xl" />
+            <SiGoogletagmanager className="text-white text-4xl" />
           </div>
         </BentoGridItem>
       </BentoGrid>

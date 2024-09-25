@@ -15,10 +15,10 @@ const Nav = () => {
         style={{ objectFit: "cover" }}
       />
       <div className="relative flex justify-between flex-row gap-10 -rotate-90 left-1/2 -translate-x-1/2 m-auto">
-        <p className="">Projects</p>
-        <p>Experience</p>
+        <p>Contact</p>
         <p>About</p>
-        {/* <p>Contact</p> */}
+        <p>Experience</p>
+        <p className="">Projects</p>
       </div>
     </div>
   );

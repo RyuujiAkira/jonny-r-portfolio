@@ -55,7 +55,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:border-white/[0.2] border border-transparent flex flex-col space-y-4 border-red-500 cursor-pointer",
+        "row-span-1 relative rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-5 dark:border-white/[0.2] border border-transparent flex flex-col space-y-4 border-red-500 cursor-pointer",
         id === 1
           ? "md:dark:bg-black-100 bg-none dark:border-none cursor-default"
           : "dark:bg-black-100 bg-white dark:border-white/[0.2] justify-between",
@@ -73,7 +73,7 @@ export const BentoGridItem = ({
         </div>
       ) : null}
       {header}
-      <div className="group-hover/bento:translate-x-2 transition duration-200 h-full flex flex-col">
+      <div className="group-hover/bento:-translate-y-2 transition duration-200 h-full flex flex-col !mt-0">
         {icon}
         {img ? (
           <div className="w-full h-full relative">
@@ -109,12 +109,12 @@ export const BentoGridItem = ({
           )}
         </div>
         {descriptionTop ? (
-          <div className="font-saria font-normal text-neutral-600 text-xl dark:text-neutral-300">
+          <div className="font-saria font-normal text-neutral-600 text-base dark:text-neutral-300">
             {descriptionTop}
           </div>
         ) : null}
         {descriptionBottom ? (
-          <div className="font-saria font-normal text-neutral-600 text-xl dark:text-neutral-300">
+          <div className="font-saria font-normal text-neutral-600 text-md dark:text-neutral-300 pt-2">
             {descriptionBottom}
           </div>
         ) : null}
