@@ -44,8 +44,8 @@ export const BentoGridItem = ({
   header?: React.ReactNode;
   icon?: React.ReactNode;
   id: number;
-  img: string;
-  imgClassName: string;
+  img?: string;
+  imgClassName?: string;
   imgStyle?: React.CSSProperties;
   pillTitle?: string;
   pillClassName?: string;
@@ -83,7 +83,7 @@ export const BentoGridItem = ({
               // height={100}
               alt="Jonny R Logo"
               fill={true}
-              style={{ ...imgStyle }}
+              style={imgStyle}
             />
           </div>
         ) : null}
