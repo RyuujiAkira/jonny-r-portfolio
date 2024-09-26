@@ -64,9 +64,23 @@ const Grid: React.FC = () => {
           titleClassName="justify-center text-center"
         >
           <div className="flex flex-row gap-10 justify-center pb-5 pt-3">
-            <SiLinkedin className="text-white text-4xl hover:scale-125 transition-all duration-300" />
-            <SiGithub className="text-white text-4xl hover:scale-125 transition-all duration-300" />
-            <SiGmail className="text-white text-4xl hover:scale-125 transition-all duration-300" />
+            <a
+              href="https://www.linkedin.com/in/jrabaja/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SiLinkedin className="text-white text-4xl hover:scale-125 transition-all duration-300" />
+            </a>
+            <a
+              href="https://github.com/RyuujiAkira"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SiGithub className="text-white text-4xl hover:scale-125 transition-all duration-300" />
+            </a>
+            <a href="mailto:jrabajac@gmail.com">
+              <SiGmail className="text-white text-4xl hover:scale-125 transition-all duration-300" />
+            </a>
           </div>
         </BentoGridItem>
         <BentoGridItem
