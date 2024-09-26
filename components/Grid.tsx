@@ -21,7 +21,7 @@ const Grid: React.FC = () => {
   return (
     <section
       id="about"
-      className="h-fit flex justify-center align-middle flex-col gap-4 z-10"
+      className="h-fit flex justify-center align-middle flex-col gap-4 z-50"
     >
       <BentoGrid>
         {heroGridItems1.map(
@@ -37,6 +37,7 @@ const Grid: React.FC = () => {
             titleClassName,
             pillTitle,
             pillClassName,
+            hoverLink,
           }) => (
             <BentoGridItem
               id={id}
@@ -51,6 +52,7 @@ const Grid: React.FC = () => {
               img={img}
               imgClassName={imgClassName}
               imgStyle={imgStyle}
+              hoverLink={hoverLink}
             />
           ),
         )}

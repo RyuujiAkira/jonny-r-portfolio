@@ -16,8 +16,6 @@ export const heroGridItems1 = [
     title: "Role - Front-End Web Developer",
     descriptionTop:
       "Day to day is supporting the business with BAU tasks such as updating assets on relevant pages and scheduling new content to go live on specific dates and times on Salesforce",
-    descriptionBottom:
-      "Additional responsibilities - A/B Testing - Dynamic Yield",
     className: "md:col-span-1 md:row-span-1",
     imgClassName: "!w-[70%] mx-auto",
     titleClassName: "justify-start",
@@ -25,14 +23,13 @@ export const heroGridItems1 = [
     imgStyle: { objectFit: "contain" as React.CSSProperties["objectFit"] },
     spareImg: "",
     pillTitle: "Work - Current",
+    hoverLink: "dss",
   },
   {
     id: 3,
     title: "Role - Front-End Web Developer",
     descriptionTop:
       "Day to day is supporting the business with BAU tasks such as updating assets on relevant pages and creating new bespoke features for different campaigns on SAP Commerce",
-    descriptionBottom:
-      "Additional responsibilities - A/B Testing - Google Optimize, Google Tag Manager, Taxi for Email",
     className: "md:col-span-1 md:row-span-1",
     imgClassName: "!w-[70%] mx-auto",
     titleClassName: "justify-center",

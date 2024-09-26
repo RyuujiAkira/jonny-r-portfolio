@@ -27,13 +27,13 @@ export const BentoGridItem = ({
   descriptionTop,
   descriptionBottom,
   header,
-  icon,
   id,
   img,
   imgClassName,
   imgStyle,
   pillTitle,
   pillClassName,
+  hoverLink,
   children,
 }: {
   className?: string;
@@ -42,13 +42,13 @@ export const BentoGridItem = ({
   descriptionTop?: string | React.ReactNode;
   descriptionBottom?: string | React.ReactNode;
   header?: React.ReactNode;
-  icon?: React.ReactNode;
   id: number;
   img?: string;
   imgClassName?: string;
   imgStyle?: React.CSSProperties;
   pillTitle?: string;
   pillClassName?: string;
+  hoverLink?: string;
   children?: React.ReactNode;
 }) => {
   return (
@@ -56,7 +56,7 @@ export const BentoGridItem = ({
       className={cn(
         "row-span-1 relative rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-5 dark:border-white/[0.2] border border-transparent flex flex-col space-y-4 border-red-500 cursor-pointer",
         id === 1
-          ? "md:dark:bg-black-100 bg-none dark:border-none cursor-default"
+          ? "md:dark:bg-black-100 bg-none dark:border-none cursor-default h-screen md:h-auto "
           : "dark:bg-black-100 bg-white dark:border-white/[0.2] justify-between",
         className,
       )}
@@ -64,18 +64,31 @@ export const BentoGridItem = ({
       {pillTitle ? (
         <div
           className={cn(
-            "absolute max-w-fit w-full h-5 px-5 py-1 bg-black-100 rounded-full -top-2 left-7 text-white text-center leading-[10px]",
+            "absolute max-w-fit w-full h-5 px-5 py-1 bg-black-100 rounded-full -top-2 left-7 text-white text-center leading-[10px] z-10",
             pillClassName,
           )}
         >
           {pillTitle}
         </div>
       ) : null}
+      {hoverLink ? (
+        <div className="h-full w-full bg-stone-700 absolute top-0 left-0 rounded-3xl !mt-0 opacity-0 transition duration-200 pointer-events-none group-hover/bento:opacity-60"></div>
+      ) : null}
+
       {header}
-      <div className="group-hover/bento:-translate-y-2 transition duration-200 h-full flex flex-col !mt-0">
-        {icon}
+      <div
+        className={cn(
+          "group-hover/bento:-translate-y-2 transition duration-200 h-full flex flex-col !mt-0",
+          id === 1 ? "justify-center" : "",
+        )}
+      >
         {img ? (
-          <div className="w-full h-full relative">
+          <div
+            className={cn(
+              "w-full min-h-20 md:h-full relative",
+              id === 1 ? "min-h-40" : "",
+            )}
+          >
             <Image
               className={cn(imgClassName)}
               src={img}
@@ -91,7 +104,7 @@ export const BentoGridItem = ({
             "font-saria font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2 text-xl",
             id === 1
               ? "md:dark:bg-black-100 bg-none dark:border-none cursor-default text-center mt-0"
-              : "dark:bg-black-100 bg-white dark:border-white/[0.2]",
+              : "dark:border-white/[0.2]",
             titleClassName,
           )}
         >
