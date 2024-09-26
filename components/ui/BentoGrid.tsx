@@ -79,10 +79,9 @@ export const BentoGridItem = ({
             <Image
               className={cn(imgClassName)}
               src={img}
-              // width={210}
-              // height={100}
               alt="Jonny R Logo"
               fill={true}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               style={imgStyle}
             />
           </div>

@@ -1,10 +1,3 @@
-export const navItems = [
-  { name: "Contact" },
-  { name: "About", link: "#about" },
-  { name: "Experience", link: "#experience" },
-  { name: "Projects", link: "#projects" },
-];
-
 export const heroGridItems1 = [
   {
     id: 1,

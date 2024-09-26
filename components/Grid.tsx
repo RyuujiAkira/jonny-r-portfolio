@@ -1,3 +1,5 @@
+"use client"; // Mark this as a Client Component
+
 import React from "react";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 import { heroGridItems1 } from "@/data";
@@ -15,11 +17,11 @@ import {
 } from "react-icons/ri";
 import { FaHtml5, FaCss3 } from "react-icons/fa";
 
-const Grid = () => {
+const Grid: React.FC = () => {
   return (
     <section
       id="about"
-      className="h-fit flex justify-center align-middle flex-col gap-4"
+      className="h-fit flex justify-center align-middle flex-col gap-4 z-10"
     >
       <BentoGrid>
         {heroGridItems1.map(
@@ -69,12 +71,6 @@ const Grid = () => {
         </BentoGridItem>
         <BentoGridItem
           id={6}
-          pillTitle="Music"
-          title="Recently Played"
-          titleClassName="justify-center text-center"
-        ></BentoGridItem>
-        <BentoGridItem
-          id={6}
           pillTitle="Tech"
           title="Skills"
           titleClassName="justify-center text-center"
@@ -89,6 +85,12 @@ const Grid = () => {
             <SiGoogletagmanager className="text-white text-4xl" />
           </div>
         </BentoGridItem>
+        <BentoGridItem
+          id={6}
+          pillTitle="Music"
+          title="Recently Played"
+          titleClassName="justify-center text-center"
+        ></BentoGridItem>
       </BentoGrid>
     </section>
   );

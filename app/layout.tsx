@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Saira_Condensed } from 'next/font/google';
+import { Saira_Condensed } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/app/provider"
+import { ThemeProvider } from "@/app/provider";
 
 const sairaCondensed = Saira_Condensed({
-  subsets: ['latin'],
-  weight: ['400', '700'], // You can add other weights as needed
-  variable: '--font-saira-condensed', // Custom CSS variable for the font
+  subsets: ["latin"],
+  weight: ["400", "700"], // You can add other weights as needed
+  variable: "--font-saira-condensed", // Custom CSS variable for the font
 });
 
 export const metadata: Metadata = {
@@ -21,15 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={sairaCondensed.className}
-      >
+      <body className={sairaCondensed.className}>
         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           {children}
         </ThemeProvider>
       </body>
