@@ -29,7 +29,6 @@ const Grid: React.FC = () => {
             id,
             title,
             descriptionTop,
-            descriptionBottom,
             className,
             img,
             imgClassName,
@@ -44,7 +43,6 @@ const Grid: React.FC = () => {
               key={id}
               title={title}
               descriptionTop={descriptionTop}
-              descriptionBottom={descriptionBottom}
               className={className}
               titleClassName={titleClassName}
               pillTitle={pillTitle}

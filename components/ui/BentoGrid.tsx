@@ -25,7 +25,6 @@ export const BentoGridItem = ({
   title,
   titleClassName,
   descriptionTop,
-  descriptionBottom,
   header,
   id,
   img,
@@ -40,7 +39,6 @@ export const BentoGridItem = ({
   title?: string | React.ReactNode;
   titleClassName?: string;
   descriptionTop?: string | React.ReactNode;
-  descriptionBottom?: string | React.ReactNode;
   header?: React.ReactNode;
   id: number;
   img?: string;
@@ -122,11 +120,6 @@ export const BentoGridItem = ({
         {descriptionTop ? (
           <div className="font-saria font-normal text-neutral-600 text-base dark:text-neutral-300">
             {descriptionTop}
-          </div>
-        ) : null}
-        {descriptionBottom ? (
-          <div className="font-saria font-normal text-neutral-600 text-md dark:text-neutral-300 pt-2">
-            {descriptionBottom}
           </div>
         ) : null}
         {children}
